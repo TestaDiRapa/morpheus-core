@@ -1,2 +1,5 @@
 #Data file for the classifier's dataset
 classifier/dataset/data
+
+#Intellij files
+**/.idea
