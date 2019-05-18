@@ -6,11 +6,6 @@ def extract_from_line(lines, i):
     return line.split('\t')
 
 
-with pyedflib.EdfReader("data/n1.edf") as f:
-    values = f.readSignal(12)
-    start_time = f.getStartdatetime()
-    sample_frequency = f.getSampleFrequency(12)
-    
 with open('data/n1.txt') as f:
     outfile = open('data/n1.out', 'w')
     outfile.write("Stage\tStart Instant\tEnd Instant\n")
@@ -29,5 +24,3 @@ with open('data/n1.txt') as f:
             outfile.write(current+"\t"+start_inst+"\t"+end_inst+"\n")
         i += 1
     outfile.close()
-        
-        
